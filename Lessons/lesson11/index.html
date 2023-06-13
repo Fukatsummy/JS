@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson11</title>
+    <script src="script.js"></script>
+</head>
+<body>
+        <button onclick="clicker" >Запустить компьютер</button>
+        <p>Выключен компьютер</p>
+
+<script>
+    function  clicker(){
+        let btn = document.querySelector('button');
+        let text = document.querySelector('p');
+        if(btn.innerText == 'Запустить компьютер'){
+            btn.innerText = 'Выключен компьютер';
+        }else{
+            btn.innerText = 'Запустить компьютер';
+        }
+    }
+    </script>
+    </body>
+</html>

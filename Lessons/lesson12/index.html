@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson11</title>
+</head>
+<body>
+        <button data-num="1" class="btn" >button</button>
+        <button class="btntwo">button 2</button>
+        <button class="btnthree" >3</button>
+    <script>
+    //первый способ
+        /*button = document.querySelector('.btn');
+        button2 = document.querySelector('.btntwo');
+        button3 = document.querySelector('.btnthree');
+
+        function f(){
+            alert('нажата кнопка')
+        }
+        
+         button.addEventListener('click', f);
+        button2.addEventListener('click', function f2(){
+            alert('нажата вторая кнопка')
+        });
+        button.addEventListener('click', f2);*/
+//позволяет один раз запустить
+        buttons = document.querySelector('button');
+       /* function f(event){
+            console.log('нажата кнопка');
+        }*/
+        f = (event) => {
+            console.log(event.target);
+            console.log(event.target.dataset);
+            console.log(event.target.dataset.num); 
+            console.log(event.target.textContent);//возвращает полностью текст
+            console.log(event.currentTarget);
+        }
+        buttons.forEach(button => {
+            button.addEventListener('click',f);
+            
+        })
+
+    </script>
+    </body>
+</html>

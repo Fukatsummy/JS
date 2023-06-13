@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson11</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <button class="btnred" value="red"></button>
+    <button class="btnblue" ></button>
+    <input type="color" onclick="change_color();">
+    <p>
+        Создать html-страницу с текстом и палитрой цветов. При клике на цвет палитры, 
+        должен изменяться цвет текста на выбранный. Для указания, какой ячейке какой цвет
+        соответствует, можно использовать атрибут data-color в каждой ячейке, а потом с
+        помощью JS получать необходимый цвет из этого атрибута.
+    </p>
+</body>
+<script>
+    function change_color() {
+        let p = document.querySelector('p');
+        let color = document.querySelector('input').value;
+        p.style.color = color;
+    }
+</script>
+</html>
